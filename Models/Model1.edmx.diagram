@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="92a8f18f8d2a447ca977b40861229e63" Name="Diagram1" ZoomLevel="71">
+        <EntityTypeShape EntityType="coleg318_Model.escolaridad" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="coleg318_Model.estado" Width="1.5" PointX="5.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="coleg318_Model.estadocivil" Width="1.5" PointX="0.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="coleg318_Model.estatus" Width="1.5" PointX="2.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="coleg318_Model.modalidad" Width="1.5" PointX="4.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="coleg318_Model.pacientes" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="coleg318_Model.sexo" Width="1.5" PointX="6.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="coleg318_Model.usuarios" Width="1.5" PointX="0.75" PointY="1.75" IsExpanded="true" />
+        <AssociationConnector Association="coleg318_Model.FK__pacientes__pacie__2BFE89A6" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="coleg318_Model.pac_consulta" Width="1.5" PointX="5.25" PointY="9.5" />
+        <EntityTypeShape EntityType="coleg318_Model.pac_descrip" Width="1.5" PointX="5.25" PointY="12.625" />
+        <EntityTypeShape EntityType="coleg318_Model.pac_situacion_act" Width="1.5" PointX="5.25" PointY="16" />
+        <AssociationConnector Association="coleg318_Model.FK__pac_consu__pac_c__41EDCAC5" />
+        <AssociationConnector Association="coleg318_Model.FK__pac_descr__pac_d__3F115E1A" />
+        <AssociationConnector Association="coleg318_Model.FK__pac_situa__pac_s__44CA3770" />
+        <EntityTypeShape EntityType="coleg318_Model.pac_constelacion_fam" Width="1.5" PointX="3" PointY="9.625" />
+        <AssociationConnector Association="coleg318_Model.FK__pac_const__pac_c__4F47C5E3" />
+        <EntityTypeShape EntityType="coleg318_Model.pac_ajustes_sociales" Width="1.5" PointX="5.25" PointY="54.125" />
+        <EntityTypeShape EntityType="coleg318_Model.pac_datos_maritales" Width="1.5" PointX="5.25" PointY="35.375" />
+        <EntityTypeShape EntityType="coleg318_Model.pac_desarrollo_sexual" Width="1.5" PointX="5.25" PointY="43.625" />
+        <EntityTypeShape EntityType="coleg318_Model.pac_desc_simismo" Width="1.5" PointX="5.25" PointY="26.125" />
+        <EntityTypeShape EntityType="coleg318_Model.pac_diversion_intereses" Width="1.5" PointX="5.25" PointY="47.125" />
+        <EntityTypeShape EntityType="coleg318_Model.pac_escolaridad" Width="1.5" PointX="5.25" PointY="50.125" />
+        <EntityTypeShape EntityType="coleg318_Model.pac_estado_mental" Width="1.5" PointX="5.25" PointY="18.75" />
+        <EntityTypeShape EntityType="coleg318_Model.pac_historia_per" Width="1.5" PointX="5.25" PointY="39" />
+        <EntityTypeShape EntityType="coleg318_Model.pac_psicoterapia" Width="1.5" PointX="5.25" PointY="32.625" />
+        <EntityTypeShape EntityType="coleg318_Model.pac_record_trabajo" Width="1.5" PointX="5.25" PointY="23.125" />
+        <EntityTypeShape EntityType="coleg318_Model.pac_recuerdos_tempranos" Width="1.5" PointX="5.25" PointY="30.125" />
+        <AssociationConnector Association="coleg318_Model.FK__pac_ajust__pac_a__7849DB76" />
+        <AssociationConnector Association="coleg318_Model.FK__pac_const__pac_c__4F47C5E31" />
+        <AssociationConnector Association="coleg318_Model.FK__pac_datos__pac_m__6BE40491" />
+        <AssociationConnector Association="coleg318_Model.FK__pac_desar__pac_d__756D6ECB" />
+        <AssociationConnector Association="coleg318_Model.FK__pac_desc___pac_s__0A688BB1" />
+        <AssociationConnector Association="coleg318_Model.FK__pac_diver__pac_d__7B264821" />
+        <AssociationConnector Association="coleg318_Model.FK__pac_escol__pac_e__00DF2177" />
+        <AssociationConnector Association="coleg318_Model.FK__pac_estad__pac_e__662B2B3B" />
+        <AssociationConnector Association="coleg318_Model.FK__pac_histo__pac_h__078C1F06" />
+        <AssociationConnector Association="coleg318_Model.FK__pac_psico__pac_p__1E6F845E" />
+        <AssociationConnector Association="coleg318_Model.FK__pac_recor__pac_r__7E02B4CC" />
+        <AssociationConnector Association="coleg318_Model.FK__pac_recue__pac_r__03BB8E22" />
+        <EntityTypeShape EntityType="coleg318_Model.diag_primario" Width="1.5" PointX="8.375" PointY="0.75" />
+        <EntityTypeShape EntityType="coleg318_Model.pac_diagnostico" Width="1.5" PointX="5.25" PointY="57.25" />
+        <AssociationConnector Association="coleg318_Model.FK__pac_diagn__pac_d__1B9317B3" />
+        <EntityTypeShape EntityType="coleg318_Model.infodiagnostico" Width="1.5" PointX="7.375" PointY="9.75" />
+        <EntityTypeShape EntityType="coleg318_Model.hojausomultiple" Width="1.5" PointX="9.375" PointY="9.75" />
+        <EntityTypeShape EntityType="coleg318_Model.alta_tratamiento" Width="1.5" PointX="11.375" PointY="3.75" />
+        <EntityTypeShape EntityType="coleg318_Model.cat_metodo_evaluacion" Width="1.5" PointX="11.375" PointY="6.75" />
+        <EntityTypeShape EntityType="coleg318_Model.evaluacion_resultado" Width="1.5" PointX="13.625" PointY="0.875" />
+        <EntityTypeShape EntityType="coleg318_Model.metodo_evaluacion" Width="1.5" PointX="11.375" PointY="1" />
+        <AssociationConnector Association="coleg318_Model.FK__evaluacio__evalu__0A338187" />
+        <EntityTypeShape EntityType="coleg318_Model.evaluacion" Width="1.5" PointX="11.375" PointY="9.75" />
+        <EntityTypeShape EntityType="coleg318_Model.cat_modelo_terapeutico" Width="1.5" PointX="11.375" PointY="12.75" />
+        <EntityTypeShape EntityType="coleg318_Model.vmetodos_evaluacion" Width="1.5" PointX="13.375" PointY="3.75" />
+        <EntityTypeShape EntityType="coleg318_Model.pacientediagnosticado" Width="1.5" PointX="13.375" PointY="6.75" />
+        <EntityTypeShape EntityType="coleg318_Model.infogeneral" Width="1.5" PointX="9.25" PointY="4.375" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

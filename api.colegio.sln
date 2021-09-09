@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30804.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "api.colegio", "api.colegio.csproj", "{1CB8DA3F-47E3-48E9-A36E-A127213B7397}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1CB8DA3F-47E3-48E9-A36E-A127213B7397}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CB8DA3F-47E3-48E9-A36E-A127213B7397}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CB8DA3F-47E3-48E9-A36E-A127213B7397}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CB8DA3F-47E3-48E9-A36E-A127213B7397}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8B475A17-6546-4E42-BF86-C9010CBC4D34}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,914 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="coleg318_Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="alta_tratamiento">
+    <Key>
+      <PropertyRef Name="alta_id" />
+    </Key>
+    <Property Name="alta_id" Type="bigint" Nullable="false" />
+    <Property Name="alta_descrip" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="cat_metodo_evaluacion">
+    <Key>
+      <PropertyRef Name="cat_metodo" />
+    </Key>
+    <Property Name="cat_metodo" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cat_metodo_descrip" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="cat_modelo_terapeutico">
+    <Key>
+      <PropertyRef Name="modtera_id" />
+    </Key>
+    <Property Name="modtera_id" Type="bigint" Nullable="false" />
+    <Property Name="modtera_descrip" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="diag_primario">
+    <Key>
+      <PropertyRef Name="diag_id" />
+    </Key>
+    <Property Name="diag_id" Type="bigint" Nullable="false" />
+    <Property Name="diag_descrip" Type="varchar" MaxLength="300" Nullable="false" />
+  </EntityType>
+  <EntityType Name="escolaridad">
+    <Key>
+      <PropertyRef Name="escolar_id" />
+    </Key>
+    <Property Name="escolar_id" Type="bigint" Nullable="false" />
+    <Property Name="escolar_descrip" Type="varchar" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <EntityType Name="estado">
+    <Key>
+      <PropertyRef Name="cve_edo" />
+    </Key>
+    <Property Name="cve_edo" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="desc_edo" Type="varchar" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <EntityType Name="estadocivil">
+    <Key>
+      <PropertyRef Name="edocivil_id" />
+    </Key>
+    <Property Name="edocivil_id" Type="bigint" Nullable="false" />
+    <Property Name="edocivil_descrip" Type="varchar" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <EntityType Name="estatus">
+    <Key>
+      <PropertyRef Name="estatus_id" />
+    </Key>
+    <Property Name="estatus_id" Type="bigint" Nullable="false" />
+    <Property Name="estatus_descrip" Type="varchar" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <EntityType Name="evaluacion_resultado">
+    <Key>
+      <PropertyRef Name="evaluacion_id" />
+    </Key>
+    <Property Name="evaluacion_id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="evaluacion_pac_id" Type="bigint" Nullable="false" />
+    <Property Name="evaluacion_metodo" Type="bigint" Nullable="false" />
+    <Property Name="evaluacion_resultado" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="metodo_evaluacion">
+    <Key>
+      <PropertyRef Name="metodo_id" />
+    </Key>
+    <Property Name="metodo_id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="metodo_evaluacion" Type="bigint" Nullable="false" />
+    <Property Name="metodo_pac_id" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="modalidad">
+    <Key>
+      <PropertyRef Name="modalidad_id" />
+    </Key>
+    <Property Name="modalidad_id" Type="bigint" Nullable="false" />
+    <Property Name="modalidad_descrip" Type="varchar" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <EntityType Name="pac_ajustes_sociales">
+    <Key>
+      <PropertyRef Name="pac_ajustes_id" />
+    </Key>
+    <Property Name="pac_ajustes_id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="pac_ajustes_pac_id" Type="bigint" Nullable="false" />
+    <Property Name="pac_ajustes_relacionesint" Type="varchar(max)" />
+    <Property Name="pac_ajustes_amistades" Type="varchar(max)" />
+    <Property Name="pac_ajustes_sentir" Type="varchar(max)" />
+    <Property Name="pac_ajustes_novias" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="pac_constelacion_fam">
+    <Key>
+      <PropertyRef Name="pac_conste_id" />
+    </Key>
+    <Property Name="pac_conste_id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="pac_conste_paciene_id" Type="bigint" Nullable="false" />
+    <Property Name="pac_conste_texto" Type="varchar(max)" />
+    <Property Name="pac_conste_antecedentes" Type="varchar(max)" />
+    <Property Name="pac_conste_desc_padre_madre" Type="varchar(max)" />
+    <Property Name="pac_conste_hermanos" Type="varchar(max)" />
+    <Property Name="pac_conste_rivalidades" Type="varchar(max)" />
+    <Property Name="pac_conste_papel_fam" Type="varchar(max)" />
+    <Property Name="pac_conste_uniones" Type="varchar(max)" />
+    <Property Name="pac_conste_normas" Type="varchar(max)" />
+    <Property Name="pac_conste_cambios" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="pac_consulta">
+    <Key>
+      <PropertyRef Name="pac_cons_id" />
+    </Key>
+    <Property Name="pac_cons_id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="pac_cons_pac_id" Type="bigint" Nullable="false" />
+    <Property Name="pac_cons_problema" Type="varchar(max)" />
+    <Property Name="pac_cons_historia" Type="varchar(max)" />
+    <Property Name="pac_cons_referencia" Type="varchar(max)" />
+    <Property Name="pac_cons_experiencia" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="pac_datos_maritales">
+    <Key>
+      <PropertyRef Name="pac_maritales_id" />
+    </Key>
+    <Property Name="pac_maritales_id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="pac_maritales_pac_id" Type="bigint" Nullable="false" />
+    <Property Name="pac_maritales_noviazgo" Type="varchar(max)" />
+    <Property Name="pac_maritales_expnoviazgo" Type="varchar(max)" />
+    <Property Name="pac_maritales_desc_conyuge" Type="varchar(max)" />
+    <Property Name="pac_maritales_eventos" Type="varchar(max)" />
+    <Property Name="pac_maritales_numhijos" Type="varchar(max)" />
+    <Property Name="pac_maritales_interaccion" Type="varchar(max)" />
+    <Property Name="pac_maritales_familia" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="pac_desarrollo_sexual">
+    <Key>
+      <PropertyRef Name="pac_desarrollo_id" />
+    </Key>
+    <Property Name="pac_desarrollo_id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="pac_desarrollo_pac_id" Type="bigint" Nullable="false" />
+    <Property Name="pac_desarrollo_nociones" Type="varchar(max)" />
+    <Property Name="pac_desarrollo_contacto" Type="varchar(max)" />
+    <Property Name="pac_desarrollo_interes" Type="varchar(max)" />
+    <Property Name="pac_desarrollo_fantasias" Type="varchar(max)" />
+    <Property Name="pac_desarrollo_homosex" Type="varchar(max)" />
+    <Property Name="pac_desarrollo_relaciones" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="pac_desc_simismo">
+    <Key>
+      <PropertyRef Name="pac_simismo_id" />
+    </Key>
+    <Property Name="pac_simismo_id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="pac_simismo_pac_id" Type="bigint" Nullable="false" />
+    <Property Name="pac_simismo_comoseve" Type="varchar(max)" />
+    <Property Name="pac_simismo_comocree" Type="varchar(max)" />
+    <Property Name="pac_simismo_preocupaciones" Type="varchar(max)" />
+    <Property Name="pac_simismo_metas" Type="varchar(max)" />
+    <Property Name="pac_simismo_gustaria" Type="varchar(max)" />
+    <Property Name="pac_simismo_crisis" Type="varchar(max)" />
+    <Property Name="pac_simismo_triunfo_frac" Type="varchar(max)" />
+    <Property Name="pac_simismo_siente_problem" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="pac_descrip">
+    <Key>
+      <PropertyRef Name="pac_desc_id" />
+    </Key>
+    <Property Name="pac_desc_id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="pac_paciente_id" Type="bigint" Nullable="false" />
+    <Property Name="pac_desc_aspectos" Type="varchar(max)" />
+    <Property Name="pac_desc_vestimenta" Type="varchar(max)" />
+    <Property Name="pac_desc_porte" Type="varchar(max)" />
+    <Property Name="pac_desc_movimientos" Type="varchar(max)" />
+    <Property Name="pac_desc_afecto" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="pac_diagnostico">
+    <Key>
+      <PropertyRef Name="pac_diag_id" />
+    </Key>
+    <Property Name="pac_diag_id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="pac_diag_pac_id" Type="bigint" Nullable="false" />
+    <Property Name="pac_diag_perfilcog" Type="varchar(max)" />
+    <Property Name="pac_diag_pruebaspsi" Type="varchar(max)" />
+    <Property Name="pac_diag_diagnostico" Type="varchar(max)" />
+    <Property Name="pac_diag_primario" Type="int" />
+    <Property Name="pac_diag_especifico" Type="varchar(max)" />
+    <Property Name="pac_diag_pronostico" Type="varchar(max)" />
+    <Property Name="pac_diag_obj_integral" Type="varchar(max)" />
+    <Property Name="pac_diag_obj_especifico" Type="varchar(max)" />
+    <Property Name="pac_diag_modelo_tera" Type="int" />
+    <Property Name="pac_diag_motivo_alta" Type="int" />
+    <Property Name="pac_diag_fec_seguimiento" Type="date" />
+  </EntityType>
+  <EntityType Name="pac_diversion_intereses">
+    <Key>
+      <PropertyRef Name="pac_diversion_id" />
+    </Key>
+    <Property Name="pac_diversion_id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="pac_diversion_pac_id" Type="bigint" Nullable="false" />
+    <Property Name="pac_diversion_lectura" Type="varchar(max)" />
+    <Property Name="pac_diversion_practicas" Type="varchar(max)" />
+    <Property Name="pac_diversion_pertenencia" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="pac_escolaridad">
+    <Key>
+      <PropertyRef Name="pac_escolaridad_id" />
+    </Key>
+    <Property Name="pac_escolaridad_id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="pac_escolaridad_pac_id" Type="bigint" Nullable="false" />
+    <Property Name="pac_escolaridad_primaria" Type="varchar(max)" />
+    <Property Name="pac_escolaridad_secundaria" Type="varchar(max)" />
+    <Property Name="pac_escolaridad_preparatoria" Type="varchar(max)" />
+    <Property Name="pac_escolaridad_otras" Type="varchar(max)" />
+    <Property Name="pac_escolaridad_relacion" Type="varchar(max)" />
+    <Property Name="pac_escolaridad_rendimiento" Type="varchar(max)" />
+    <Property Name="pac_escolaridad_cambios" Type="varchar(max)" />
+    <Property Name="pac_escolaridad_evaluacion" Type="varchar(max)" />
+    <Property Name="pac_escolaridad_universidad" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="pac_estado_mental">
+    <Key>
+      <PropertyRef Name="pac_estado_id" />
+    </Key>
+    <Property Name="pac_estado_id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="pac_estado_pac_id" Type="bigint" Nullable="false" />
+    <Property Name="pac_estado_conciencia" Type="varchar(max)" />
+    <Property Name="pac_estado_orientacion" Type="varchar(max)" />
+    <Property Name="pac_estadoafectividad" Type="varchar(max)" />
+    <Property Name="pac_estado_asociaciones" Type="varchar(max)" />
+    <Property Name="pac_estado_pensamiento" Type="varchar(max)" />
+    <Property Name="pac_estado_percepcion" Type="varchar(max)" />
+    <Property Name="pac_estado_funcionamiento" Type="varchar(max)" />
+    <Property Name="pac_estado_juicio" Type="varchar(max)" />
+    <Property Name="pac_estado_insight" Type="varchar(max)" />
+    <Property Name="pac_estado_madurez" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="pac_historia_per">
+    <Key>
+      <PropertyRef Name="pac_hist_id" />
+    </Key>
+    <Property Name="pac_hist_id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="pac_hist_pac_id" Type="bigint" Nullable="false" />
+    <Property Name="pac_hist_embarazo" Type="varchar(max)" />
+    <Property Name="pac_hist_inicio" Type="varchar(max)" />
+    <Property Name="pac_hist_infancia" Type="varchar(max)" />
+    <Property Name="pac_hist_nines_re" Type="varchar(max)" />
+    <Property Name="pac_hist_adolecencia" Type="varchar(max)" />
+    <Property Name="pac_hist_edad_ad" Type="varchar(max)" />
+    <Property Name="pac_hist_edad_av" Type="varchar(max)" />
+    <Property Name="pac_hist_alimentacion" Type="varchar(max)" />
+    <Property Name="pac_hist_sueno" Type="varchar(max)" />
+    <Property Name="pac_hist_enfermedades" Type="varchar(max)" />
+    <Property Name="pac_hist_lesiones" Type="varchar(max)" />
+    <Property Name="pac_hist_salud_act" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="pac_psicoterapia">
+    <Key>
+      <PropertyRef Name="pac_psico_id" />
+    </Key>
+    <Property Name="pac_psico_id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="pac_psico_pac_id" Type="bigint" Nullable="false" />
+    <Property Name="pac_psico_desc" Type="varchar(max)" />
+    <Property Name="pac_psico_texto" Type="varchar(max)" />
+    <Property Name="pac_psico_fecha" Type="datetime" />
+    <Property Name="pac_psico_intervencion" Type="varchar" MaxLength="500" />
+    <Property Name="pac_psico_tecnicas" Type="varchar" MaxLength="500" />
+    <Property Name="pac_psico_resultados" Type="varchar(max)" />
+    <Property Name="pac_psico_recomenda" Type="varchar(max)" />
+    <Property Name="pac_psico_observaciones" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="pac_record_trabajo">
+    <Key>
+      <PropertyRef Name="pac_record_id" />
+    </Key>
+    <Property Name="pac_record_id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="pac_record_pac_id" Type="bigint" Nullable="false" />
+    <Property Name="pac_record_trabajos" Type="varchar(max)" />
+    <Property Name="pac_record_sueldo" Type="varchar(max)" />
+    <Property Name="pac_record_relacion" Type="varchar(max)" />
+    <Property Name="pac_record_siente" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="pac_recuerdos_tempranos">
+    <Key>
+      <PropertyRef Name="pac_recuerdos_id" />
+    </Key>
+    <Property Name="pac_recuerdos_id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="pac_recuerdos_pac_id" Type="bigint" Nullable="false" />
+    <Property Name="pac_recuerdos_temp" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="pac_situacion_act">
+    <Key>
+      <PropertyRef Name="pac_situacion_id" />
+    </Key>
+    <Property Name="pac_situacion_id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="pac_situacion_pac_id" Type="bigint" Nullable="false" />
+    <Property Name="pac_situacion_dia" Type="varchar(max)" />
+    <Property Name="pac_situacion_esp" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="pacientes">
+    <Key>
+      <PropertyRef Name="paciente_id" />
+    </Key>
+    <Property Name="paciente_id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="paciente_usuario" Type="bigint" Nullable="false" />
+    <Property Name="paciente_nombre" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="paciente_sexo" Type="bigint" />
+    <Property Name="paciente_edad" Type="int" Nullable="false" />
+    <Property Name="paciente_edo_nac" Type="varchar" MaxLength="4" />
+    <Property Name="paciente_mun_nac" Type="varchar" MaxLength="6" />
+    <Property Name="paciente_fec_nac" Type="date" />
+    <Property Name="paciente_edo_civil" Type="int" />
+    <Property Name="paciente_estatus" Type="int" />
+    <Property Name="paciente_direccion" Type="varchar" MaxLength="100" />
+    <Property Name="paciente_ocupacion" Type="varchar" MaxLength="50" />
+    <Property Name="paciente_escolaridad" Type="int" />
+    <Property Name="paciente_fec_ing" Type="date" />
+    <Property Name="paciente_telefono" Type="varchar" MaxLength="12" />
+    <Property Name="paciente_modalidad" Type="int" />
+    <Property Name="paciente_edo_res" Type="varchar" MaxLength="4" />
+    <Property Name="paciente_mun_res" Type="varchar" MaxLength="6" />
+    <Property Name="paciente_telefono_eme" Type="varchar" MaxLength="12" />
+  </EntityType>
+  <EntityType Name="sexo">
+    <Key>
+      <PropertyRef Name="sexo_id" />
+    </Key>
+    <Property Name="sexo_id" Type="bigint" Nullable="false" />
+    <Property Name="sexo_descrip" Type="varchar" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <EntityType Name="usuarios">
+    <Key>
+      <PropertyRef Name="usuario_id" />
+    </Key>
+    <Property Name="usuario_id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="usuario_nombre" Type="nvarchar" MaxLength="50" />
+    <Property Name="usuario_direccion" Type="nvarchar" MaxLength="50" />
+    <Property Name="usuario_cel" Type="nvarchar" MaxLength="50" />
+    <Property Name="usuario_telcsa" Type="nvarchar" MaxLength="50" />
+    <Property Name="usuario_correo" Type="nvarchar" MaxLength="50" />
+    <Property Name="usuario_tipo" Type="int" />
+    <Property Name="usuario_fecha_ing" Type="datetime" />
+    <Property Name="usuario_password" Type="varchar(max)" />
+    <Property Name="usuario_cedula" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'coleg318_.Admin.evaluacion' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="evaluacion">
+    <Key>
+      <PropertyRef Name="Expr1" />
+      <PropertyRef Name="cat_metodo" />
+      <PropertyRef Name="cat_metodo_descrip" />
+      <PropertyRef Name="metodo_id" />
+      <PropertyRef Name="metodo_evaluacion" />
+      <PropertyRef Name="metodo_pac_id" />
+    </Key>
+    <Property Name="Expr1" Type="bigint" Nullable="false" />
+    <Property Name="cat_metodo" Type="bigint" Nullable="false" />
+    <Property Name="cat_metodo_descrip" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="metodo_id" Type="bigint" Nullable="false" />
+    <Property Name="metodo_evaluacion" Type="bigint" Nullable="false" />
+    <Property Name="metodo_pac_id" Type="bigint" Nullable="false" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'coleg318_.Admin.hojausomultiple' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="hojausomultiple">
+    <Key>
+      <PropertyRef Name="paciente_id" />
+      <PropertyRef Name="paciente_usuario" />
+      <PropertyRef Name="paciente_nombre" />
+      <PropertyRef Name="paciente_edad" />
+      <PropertyRef Name="usuario_id" />
+      <PropertyRef Name="Expr1" />
+      <PropertyRef Name="sexo_descrip" />
+      <PropertyRef Name="edocivil_descrip" />
+      <PropertyRef Name="modalidad_descrip" />
+    </Key>
+    <Property Name="paciente_id" Type="bigint" Nullable="false" />
+    <Property Name="paciente_usuario" Type="bigint" Nullable="false" />
+    <Property Name="paciente_nombre" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="paciente_sexo" Type="bigint" />
+    <Property Name="paciente_edad" Type="int" Nullable="false" />
+    <Property Name="paciente_edo_nac" Type="varchar" MaxLength="4" />
+    <Property Name="paciente_mun_nac" Type="varchar" MaxLength="6" />
+    <Property Name="paciente_fec_nac" Type="date" />
+    <Property Name="paciente_edo_civil" Type="int" />
+    <Property Name="paciente_estatus" Type="int" />
+    <Property Name="paciente_direccion" Type="varchar" MaxLength="100" />
+    <Property Name="paciente_ocupacion" Type="varchar" MaxLength="50" />
+    <Property Name="paciente_escolaridad" Type="int" />
+    <Property Name="paciente_fec_ing" Type="date" />
+    <Property Name="paciente_telefono" Type="varchar" MaxLength="12" />
+    <Property Name="paciente_modalidad" Type="int" />
+    <Property Name="usuario_id" Type="bigint" Nullable="false" />
+    <Property Name="usuario_nombre" Type="nvarchar" MaxLength="50" />
+    <Property Name="usuario_direccion" Type="nvarchar" MaxLength="50" />
+    <Property Name="usuario_cel" Type="nvarchar" MaxLength="50" />
+    <Property Name="usuario_telcsa" Type="nvarchar" MaxLength="50" />
+    <Property Name="usuario_correo" Type="nvarchar" MaxLength="50" />
+    <Property Name="usuario_tipo" Type="int" />
+    <Property Name="usuario_fecha_ing" Type="datetime" />
+    <Property Name="usuario_password" Type="varchar(max)" />
+    <Property Name="usuario_cedula" Type="varchar" MaxLength="50" />
+    <Property Name="Expr1" Type="bigint" Nullable="false" />
+    <Property Name="sexo_descrip" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="edocivil_descrip" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="modalidad_descrip" Type="varchar" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'coleg318_.Admin.infodiagnostico' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="infodiagnostico">
+    <Key>
+      <PropertyRef Name="diag_descrip" />
+      <PropertyRef Name="pac_diag_id" />
+      <PropertyRef Name="pac_diag_pac_id" />
+      <PropertyRef Name="alta_descrip" />
+    </Key>
+    <Property Name="diag_descrip" Type="varchar" MaxLength="300" Nullable="false" />
+    <Property Name="pac_diag_id" Type="bigint" Nullable="false" />
+    <Property Name="pac_diag_pac_id" Type="bigint" Nullable="false" />
+    <Property Name="pac_diag_perfilcog" Type="varchar(max)" />
+    <Property Name="pac_diag_pruebaspsi" Type="varchar(max)" />
+    <Property Name="pac_diag_diagnostico" Type="varchar(max)" />
+    <Property Name="pac_diag_especifico" Type="varchar(max)" />
+    <Property Name="pac_diag_pronostico" Type="varchar(max)" />
+    <Property Name="pac_diag_primario" Type="int" />
+    <Property Name="pac_diag_obj_integral" Type="varchar(max)" />
+    <Property Name="pac_diag_obj_especifico" Type="varchar(max)" />
+    <Property Name="pac_diag_fec_seguimiento" Type="date" />
+    <Property Name="alta_descrip" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="modtera_descrip" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'coleg318_.Admin.infogeneral' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="infogeneral">
+    <Key>
+      <PropertyRef Name="paciente_id" />
+      <PropertyRef Name="paciente_usuario" />
+      <PropertyRef Name="paciente_nombre" />
+      <PropertyRef Name="sexo_descrip" />
+      <PropertyRef Name="paciente_edad" />
+      <PropertyRef Name="desc_edo" />
+      <PropertyRef Name="edocivil_descrip" />
+      <PropertyRef Name="estatus_descrip" />
+      <PropertyRef Name="escolar_descrip" />
+      <PropertyRef Name="modalidad_descrip" />
+    </Key>
+    <Property Name="paciente_id" Type="bigint" Nullable="false" />
+    <Property Name="paciente_usuario" Type="bigint" Nullable="false" />
+    <Property Name="paciente_nombre" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="sexo_descrip" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="paciente_edad" Type="int" Nullable="false" />
+    <Property Name="desc_edo" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="desc_mun" Type="varchar" MaxLength="50" />
+    <Property Name="paciente_fec_nac" Type="date" />
+    <Property Name="edocivil_descrip" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="estatus_descrip" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="paciente_direccion" Type="varchar" MaxLength="100" />
+    <Property Name="paciente_ocupacion" Type="varchar" MaxLength="50" />
+    <Property Name="escolar_descrip" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="paciente_fec_ing" Type="date" />
+    <Property Name="paciente_telefono" Type="varchar" MaxLength="12" />
+    <Property Name="paciente_telefono_eme" Type="varchar" MaxLength="12" />
+    <Property Name="modalidad_descrip" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="estado_res" Type="varchar" MaxLength="30" />
+    <Property Name="municipio_res" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'coleg318_.Admin.pacientediagnosticado' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="pacientediagnosticado">
+    <Key>
+      <PropertyRef Name="paciente_nombre" />
+      <PropertyRef Name="paciente_usuario" />
+      <PropertyRef Name="diag_id" />
+    </Key>
+    <Property Name="paciente_nombre" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="paciente_usuario" Type="bigint" Nullable="false" />
+    <Property Name="diag_id" Type="bigint" Nullable="false" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'coleg318_.Admin.vmetodos_evaluacion' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="vmetodos_evaluacion">
+    <Key>
+      <PropertyRef Name="metodo_id" />
+      <PropertyRef Name="metodo_evaluacion" />
+      <PropertyRef Name="metodo_pac_id" />
+      <PropertyRef Name="evaluacion" />
+    </Key>
+    <Property Name="metodo_id" Type="bigint" Nullable="false" />
+    <Property Name="metodo_evaluacion" Type="bigint" Nullable="false" />
+    <Property Name="metodo_pac_id" Type="bigint" Nullable="false" />
+    <Property Name="evaluacion" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="resultado" Type="varchar(max)" />
+  </EntityType>
+  <Association Name="FK__evaluacio__evalu__0A338187">
+    <End Role="metodo_evaluacion" Type="Self.metodo_evaluacion" Multiplicity="1" />
+    <End Role="evaluacion_resultado" Type="Self.evaluacion_resultado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="metodo_evaluacion">
+        <PropertyRef Name="metodo_id" />
+      </Principal>
+      <Dependent Role="evaluacion_resultado">
+        <PropertyRef Name="evaluacion_metodo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__pac_ajust__pac_a__7849DB76">
+    <End Role="pacientes" Type="Self.pacientes" Multiplicity="1" />
+    <End Role="pac_ajustes_sociales" Type="Self.pac_ajustes_sociales" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="pacientes">
+        <PropertyRef Name="paciente_id" />
+      </Principal>
+      <Dependent Role="pac_ajustes_sociales">
+        <PropertyRef Name="pac_ajustes_pac_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__pac_const__pac_c__4F47C5E3">
+    <End Role="pacientes" Type="Self.pacientes" Multiplicity="1" />
+    <End Role="pac_constelacion_fam" Type="Self.pac_constelacion_fam" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="pacientes">
+        <PropertyRef Name="paciente_id" />
+      </Principal>
+      <Dependent Role="pac_constelacion_fam">
+        <PropertyRef Name="pac_conste_paciene_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__pac_consu__pac_c__41EDCAC5">
+    <End Role="pacientes" Type="Self.pacientes" Multiplicity="1" />
+    <End Role="pac_consulta" Type="Self.pac_consulta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="pacientes">
+        <PropertyRef Name="paciente_id" />
+      </Principal>
+      <Dependent Role="pac_consulta">
+        <PropertyRef Name="pac_cons_pac_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__pac_datos__pac_m__6BE40491">
+    <End Role="pacientes" Type="Self.pacientes" Multiplicity="1" />
+    <End Role="pac_datos_maritales" Type="Self.pac_datos_maritales" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="pacientes">
+        <PropertyRef Name="paciente_id" />
+      </Principal>
+      <Dependent Role="pac_datos_maritales">
+        <PropertyRef Name="pac_maritales_pac_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__pac_desar__pac_d__756D6ECB">
+    <End Role="pacientes" Type="Self.pacientes" Multiplicity="1" />
+    <End Role="pac_desarrollo_sexual" Type="Self.pac_desarrollo_sexual" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="pacientes">
+        <PropertyRef Name="paciente_id" />
+      </Principal>
+      <Dependent Role="pac_desarrollo_sexual">
+        <PropertyRef Name="pac_desarrollo_pac_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__pac_desc___pac_s__0A688BB1">
+    <End Role="pacientes" Type="Self.pacientes" Multiplicity="1" />
+    <End Role="pac_desc_simismo" Type="Self.pac_desc_simismo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="pacientes">
+        <PropertyRef Name="paciente_id" />
+      </Principal>
+      <Dependent Role="pac_desc_simismo">
+        <PropertyRef Name="pac_simismo_pac_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__pac_descr__pac_d__3F115E1A">
+    <End Role="pacientes" Type="Self.pacientes" Multiplicity="1" />
+    <End Role="pac_descrip" Type="Self.pac_descrip" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="pacientes">
+        <PropertyRef Name="paciente_id" />
+      </Principal>
+      <Dependent Role="pac_descrip">
+        <PropertyRef Name="pac_paciente_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__pac_diagn__pac_d__1B9317B3">
+    <End Role="pacientes" Type="Self.pacientes" Multiplicity="1" />
+    <End Role="pac_diagnostico" Type="Self.pac_diagnostico" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="pacientes">
+        <PropertyRef Name="paciente_id" />
+      </Principal>
+      <Dependent Role="pac_diagnostico">
+        <PropertyRef Name="pac_diag_pac_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__pac_diver__pac_d__7B264821">
+    <End Role="pacientes" Type="Self.pacientes" Multiplicity="1" />
+    <End Role="pac_diversion_intereses" Type="Self.pac_diversion_intereses" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="pacientes">
+        <PropertyRef Name="paciente_id" />
+      </Principal>
+      <Dependent Role="pac_diversion_intereses">
+        <PropertyRef Name="pac_diversion_pac_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__pac_escol__pac_e__00DF2177">
+    <End Role="pacientes" Type="Self.pacientes" Multiplicity="1" />
+    <End Role="pac_escolaridad" Type="Self.pac_escolaridad" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="pacientes">
+        <PropertyRef Name="paciente_id" />
+      </Principal>
+      <Dependent Role="pac_escolaridad">
+        <PropertyRef Name="pac_escolaridad_pac_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__pac_estad__pac_e__662B2B3B">
+    <End Role="pacientes" Type="Self.pacientes" Multiplicity="1" />
+    <End Role="pac_estado_mental" Type="Self.pac_estado_mental" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="pacientes">
+        <PropertyRef Name="paciente_id" />
+      </Principal>
+      <Dependent Role="pac_estado_mental">
+        <PropertyRef Name="pac_estado_pac_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__pac_histo__pac_h__078C1F06">
+    <End Role="pacientes" Type="Self.pacientes" Multiplicity="1" />
+    <End Role="pac_historia_per" Type="Self.pac_historia_per" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="pacientes">
+        <PropertyRef Name="paciente_id" />
+      </Principal>
+      <Dependent Role="pac_historia_per">
+        <PropertyRef Name="pac_hist_pac_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__pac_psico__pac_p__1E6F845E">
+    <End Role="pacientes" Type="Self.pacientes" Multiplicity="1" />
+    <End Role="pac_psicoterapia" Type="Self.pac_psicoterapia" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="pacientes">
+        <PropertyRef Name="paciente_id" />
+      </Principal>
+      <Dependent Role="pac_psicoterapia">
+        <PropertyRef Name="pac_psico_pac_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__pac_recor__pac_r__7E02B4CC">
+    <End Role="pacientes" Type="Self.pacientes" Multiplicity="1" />
+    <End Role="pac_record_trabajo" Type="Self.pac_record_trabajo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="pacientes">
+        <PropertyRef Name="paciente_id" />
+      </Principal>
+      <Dependent Role="pac_record_trabajo">
+        <PropertyRef Name="pac_record_pac_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__pac_recue__pac_r__03BB8E22">
+    <End Role="pacientes" Type="Self.pacientes" Multiplicity="1" />
+    <End Role="pac_recuerdos_tempranos" Type="Self.pac_recuerdos_tempranos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="pacientes">
+        <PropertyRef Name="paciente_id" />
+      </Principal>
+      <Dependent Role="pac_recuerdos_tempranos">
+        <PropertyRef Name="pac_recuerdos_pac_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__pac_situa__pac_s__44CA3770">
+    <End Role="pacientes" Type="Self.pacientes" Multiplicity="1" />
+    <End Role="pac_situacion_act" Type="Self.pac_situacion_act" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="pacientes">
+        <PropertyRef Name="paciente_id" />
+      </Principal>
+      <Dependent Role="pac_situacion_act">
+        <PropertyRef Name="pac_situacion_pac_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__pacientes__pacie__2BFE89A6">
+    <End Role="usuarios" Type="Self.usuarios" Multiplicity="1" />
+    <End Role="pacientes" Type="Self.pacientes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="usuarios">
+        <PropertyRef Name="usuario_id" />
+      </Principal>
+      <Dependent Role="pacientes">
+        <PropertyRef Name="paciente_usuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="coleg318_ModelStoreContainer">
+    <EntitySet Name="alta_tratamiento" EntityType="Self.alta_tratamiento" Schema="Admin" store:Type="Tables" />
+    <EntitySet Name="cat_metodo_evaluacion" EntityType="Self.cat_metodo_evaluacion" Schema="Admin" store:Type="Tables" />
+    <EntitySet Name="cat_modelo_terapeutico" EntityType="Self.cat_modelo_terapeutico" Schema="Admin" store:Type="Tables" />
+    <EntitySet Name="diag_primario" EntityType="Self.diag_primario" Schema="Admin" store:Type="Tables" />
+    <EntitySet Name="escolaridad" EntityType="Self.escolaridad" Schema="Admin" store:Type="Tables" />
+    <EntitySet Name="estado" EntityType="Self.estado" Schema="Admin" store:Type="Tables" />
+    <EntitySet Name="estadocivil" EntityType="Self.estadocivil" Schema="Admin" store:Type="Tables" />
+    <EntitySet Name="estatus" EntityType="Self.estatus" Schema="Admin" store:Type="Tables" />
+    <EntitySet Name="evaluacion_resultado" EntityType="Self.evaluacion_resultado" Schema="Admin" store:Type="Tables" />
+    <EntitySet Name="metodo_evaluacion" EntityType="Self.metodo_evaluacion" Schema="Admin" store:Type="Tables" />
+    <EntitySet Name="modalidad" EntityType="Self.modalidad" Schema="Admin" store:Type="Tables" />
+    <EntitySet Name="pac_ajustes_sociales" EntityType="Self.pac_ajustes_sociales" Schema="Admin" store:Type="Tables" />
+    <EntitySet Name="pac_constelacion_fam" EntityType="Self.pac_constelacion_fam" Schema="Admin" store:Type="Tables" />
+    <EntitySet Name="pac_consulta" EntityType="Self.pac_consulta" Schema="Admin" store:Type="Tables" />
+    <EntitySet Name="pac_datos_maritales" EntityType="Self.pac_datos_maritales" Schema="Admin" store:Type="Tables" />
+    <EntitySet Name="pac_desarrollo_sexual" EntityType="Self.pac_desarrollo_sexual" Schema="Admin" store:Type="Tables" />
+    <EntitySet Name="pac_desc_simismo" EntityType="Self.pac_desc_simismo" Schema="Admin" store:Type="Tables" />
+    <EntitySet Name="pac_descrip" EntityType="Self.pac_descrip" Schema="Admin" store:Type="Tables" />
+    <EntitySet Name="pac_diagnostico" EntityType="Self.pac_diagnostico" Schema="Admin" store:Type="Tables" />
+    <EntitySet Name="pac_diversion_intereses" EntityType="Self.pac_diversion_intereses" Schema="Admin" store:Type="Tables" />
+    <EntitySet Name="pac_escolaridad" EntityType="Self.pac_escolaridad" Schema="Admin" store:Type="Tables" />
+    <EntitySet Name="pac_estado_mental" EntityType="Self.pac_estado_mental" Schema="Admin" store:Type="Tables" />
+    <EntitySet Name="pac_historia_per" EntityType="Self.pac_historia_per" Schema="Admin" store:Type="Tables" />
+    <EntitySet Name="pac_psicoterapia" EntityType="Self.pac_psicoterapia" Schema="Admin" store:Type="Tables" />
+    <EntitySet Name="pac_record_trabajo" EntityType="Self.pac_record_trabajo" Schema="Admin" store:Type="Tables" />
+    <EntitySet Name="pac_recuerdos_tempranos" EntityType="Self.pac_recuerdos_tempranos" Schema="Admin" store:Type="Tables" />
+    <EntitySet Name="pac_situacion_act" EntityType="Self.pac_situacion_act" Schema="Admin" store:Type="Tables" />
+    <EntitySet Name="pacientes" EntityType="Self.pacientes" Schema="Admin" store:Type="Tables" />
+    <EntitySet Name="sexo" EntityType="Self.sexo" Schema="Admin" store:Type="Tables" />
+    <EntitySet Name="usuarios" EntityType="Self.usuarios" Schema="Admin" store:Type="Tables" />
+    <EntitySet Name="evaluacion" EntityType="Self.evaluacion" store:Type="Views" store:Schema="Admin">
+      <DefiningQuery>SELECT 
+[evaluacion].[Expr1] AS [Expr1], 
+[evaluacion].[cat_metodo] AS [cat_metodo], 
+[evaluacion].[cat_metodo_descrip] AS [cat_metodo_descrip], 
+[evaluacion].[metodo_id] AS [metodo_id], 
+[evaluacion].[metodo_evaluacion] AS [metodo_evaluacion], 
+[evaluacion].[metodo_pac_id] AS [metodo_pac_id]
+FROM [Admin].[evaluacion] AS [evaluacion]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="hojausomultiple" EntityType="Self.hojausomultiple" store:Type="Views" store:Schema="Admin">
+      <DefiningQuery>SELECT 
+[hojausomultiple].[paciente_id] AS [paciente_id], 
+[hojausomultiple].[paciente_usuario] AS [paciente_usuario], 
+[hojausomultiple].[paciente_nombre] AS [paciente_nombre], 
+[hojausomultiple].[paciente_sexo] AS [paciente_sexo], 
+[hojausomultiple].[paciente_edad] AS [paciente_edad], 
+[hojausomultiple].[paciente_edo_nac] AS [paciente_edo_nac], 
+[hojausomultiple].[paciente_mun_nac] AS [paciente_mun_nac], 
+[hojausomultiple].[paciente_fec_nac] AS [paciente_fec_nac], 
+[hojausomultiple].[paciente_edo_civil] AS [paciente_edo_civil], 
+[hojausomultiple].[paciente_estatus] AS [paciente_estatus], 
+[hojausomultiple].[paciente_direccion] AS [paciente_direccion], 
+[hojausomultiple].[paciente_ocupacion] AS [paciente_ocupacion], 
+[hojausomultiple].[paciente_escolaridad] AS [paciente_escolaridad], 
+[hojausomultiple].[paciente_fec_ing] AS [paciente_fec_ing], 
+[hojausomultiple].[paciente_telefono] AS [paciente_telefono], 
+[hojausomultiple].[paciente_modalidad] AS [paciente_modalidad], 
+[hojausomultiple].[usuario_id] AS [usuario_id], 
+[hojausomultiple].[usuario_nombre] AS [usuario_nombre], 
+[hojausomultiple].[usuario_direccion] AS [usuario_direccion], 
+[hojausomultiple].[usuario_cel] AS [usuario_cel], 
+[hojausomultiple].[usuario_telcsa] AS [usuario_telcsa], 
+[hojausomultiple].[usuario_correo] AS [usuario_correo], 
+[hojausomultiple].[usuario_tipo] AS [usuario_tipo], 
+[hojausomultiple].[usuario_fecha_ing] AS [usuario_fecha_ing], 
+[hojausomultiple].[usuario_password] AS [usuario_password], 
+[hojausomultiple].[usuario_cedula] AS [usuario_cedula], 
+[hojausomultiple].[Expr1] AS [Expr1], 
+[hojausomultiple].[sexo_descrip] AS [sexo_descrip], 
+[hojausomultiple].[edocivil_descrip] AS [edocivil_descrip], 
+[hojausomultiple].[modalidad_descrip] AS [modalidad_descrip]
+FROM [Admin].[hojausomultiple] AS [hojausomultiple]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="infodiagnostico" EntityType="Self.infodiagnostico" store:Type="Views" store:Schema="Admin">
+      <DefiningQuery>SELECT 
+[infodiagnostico].[diag_descrip] AS [diag_descrip], 
+[infodiagnostico].[pac_diag_id] AS [pac_diag_id], 
+[infodiagnostico].[pac_diag_pac_id] AS [pac_diag_pac_id], 
+[infodiagnostico].[pac_diag_perfilcog] AS [pac_diag_perfilcog], 
+[infodiagnostico].[pac_diag_pruebaspsi] AS [pac_diag_pruebaspsi], 
+[infodiagnostico].[pac_diag_diagnostico] AS [pac_diag_diagnostico], 
+[infodiagnostico].[pac_diag_especifico] AS [pac_diag_especifico], 
+[infodiagnostico].[pac_diag_pronostico] AS [pac_diag_pronostico], 
+[infodiagnostico].[pac_diag_primario] AS [pac_diag_primario], 
+[infodiagnostico].[pac_diag_obj_integral] AS [pac_diag_obj_integral], 
+[infodiagnostico].[pac_diag_obj_especifico] AS [pac_diag_obj_especifico], 
+[infodiagnostico].[pac_diag_fec_seguimiento] AS [pac_diag_fec_seguimiento], 
+[infodiagnostico].[alta_descrip] AS [alta_descrip], 
+[infodiagnostico].[modtera_descrip] AS [modtera_descrip]
+FROM [Admin].[infodiagnostico] AS [infodiagnostico]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="infogeneral" EntityType="Self.infogeneral" store:Type="Views" store:Schema="Admin">
+      <DefiningQuery>SELECT 
+[infogeneral].[paciente_id] AS [paciente_id], 
+[infogeneral].[paciente_usuario] AS [paciente_usuario], 
+[infogeneral].[paciente_nombre] AS [paciente_nombre], 
+[infogeneral].[sexo_descrip] AS [sexo_descrip], 
+[infogeneral].[paciente_edad] AS [paciente_edad], 
+[infogeneral].[desc_edo] AS [desc_edo], 
+[infogeneral].[desc_mun] AS [desc_mun], 
+[infogeneral].[paciente_fec_nac] AS [paciente_fec_nac], 
+[infogeneral].[edocivil_descrip] AS [edocivil_descrip], 
+[infogeneral].[estatus_descrip] AS [estatus_descrip], 
+[infogeneral].[paciente_direccion] AS [paciente_direccion], 
+[infogeneral].[paciente_ocupacion] AS [paciente_ocupacion], 
+[infogeneral].[escolar_descrip] AS [escolar_descrip], 
+[infogeneral].[paciente_fec_ing] AS [paciente_fec_ing], 
+[infogeneral].[paciente_telefono] AS [paciente_telefono], 
+[infogeneral].[paciente_telefono_eme] AS [paciente_telefono_eme], 
+[infogeneral].[modalidad_descrip] AS [modalidad_descrip], 
+[infogeneral].[estado_res] AS [estado_res], 
+[infogeneral].[municipio_res] AS [municipio_res]
+FROM [Admin].[infogeneral] AS [infogeneral]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="pacientediagnosticado" EntityType="Self.pacientediagnosticado" store:Type="Views" store:Schema="Admin">
+      <DefiningQuery>SELECT 
+[pacientediagnosticado].[paciente_nombre] AS [paciente_nombre], 
+[pacientediagnosticado].[paciente_usuario] AS [paciente_usuario], 
+[pacientediagnosticado].[diag_id] AS [diag_id]
+FROM [Admin].[pacientediagnosticado] AS [pacientediagnosticado]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vmetodos_evaluacion" EntityType="Self.vmetodos_evaluacion" store:Type="Views" store:Schema="Admin">
+      <DefiningQuery>SELECT 
+[vmetodos_evaluacion].[metodo_id] AS [metodo_id], 
+[vmetodos_evaluacion].[metodo_evaluacion] AS [metodo_evaluacion], 
+[vmetodos_evaluacion].[metodo_pac_id] AS [metodo_pac_id], 
+[vmetodos_evaluacion].[evaluacion] AS [evaluacion], 
+[vmetodos_evaluacion].[resultado] AS [resultado]
+FROM [Admin].[vmetodos_evaluacion] AS [vmetodos_evaluacion]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK__evaluacio__evalu__0A338187" Association="Self.FK__evaluacio__evalu__0A338187">
+      <End Role="metodo_evaluacion" EntitySet="metodo_evaluacion" />
+      <End Role="evaluacion_resultado" EntitySet="evaluacion_resultado" />
+    </AssociationSet>
+    <AssociationSet Name="FK__pac_ajust__pac_a__7849DB76" Association="Self.FK__pac_ajust__pac_a__7849DB76">
+      <End Role="pacientes" EntitySet="pacientes" />
+      <End Role="pac_ajustes_sociales" EntitySet="pac_ajustes_sociales" />
+    </AssociationSet>
+    <AssociationSet Name="FK__pac_const__pac_c__4F47C5E3" Association="Self.FK__pac_const__pac_c__4F47C5E3">
+      <End Role="pacientes" EntitySet="pacientes" />
+      <End Role="pac_constelacion_fam" EntitySet="pac_constelacion_fam" />
+    </AssociationSet>
+    <AssociationSet Name="FK__pac_consu__pac_c__41EDCAC5" Association="Self.FK__pac_consu__pac_c__41EDCAC5">
+      <End Role="pacientes" EntitySet="pacientes" />
+      <End Role="pac_consulta" EntitySet="pac_consulta" />
+    </AssociationSet>
+    <AssociationSet Name="FK__pac_datos__pac_m__6BE40491" Association="Self.FK__pac_datos__pac_m__6BE40491">
+      <End Role="pacientes" EntitySet="pacientes" />
+      <End Role="pac_datos_maritales" EntitySet="pac_datos_maritales" />
+    </AssociationSet>
+    <AssociationSet Name="FK__pac_desar__pac_d__756D6ECB" Association="Self.FK__pac_desar__pac_d__756D6ECB">
+      <End Role="pacientes" EntitySet="pacientes" />
+      <End Role="pac_desarrollo_sexual" EntitySet="pac_desarrollo_sexual" />
+    </AssociationSet>
+    <AssociationSet Name="FK__pac_desc___pac_s__0A688BB1" Association="Self.FK__pac_desc___pac_s__0A688BB1">
+      <End Role="pacientes" EntitySet="pacientes" />
+      <End Role="pac_desc_simismo" EntitySet="pac_desc_simismo" />
+    </AssociationSet>
+    <AssociationSet Name="FK__pac_descr__pac_d__3F115E1A" Association="Self.FK__pac_descr__pac_d__3F115E1A">
+      <End Role="pacientes" EntitySet="pacientes" />
+      <End Role="pac_descrip" EntitySet="pac_descrip" />
+    </AssociationSet>
+    <AssociationSet Name="FK__pac_diagn__pac_d__1B9317B3" Association="Self.FK__pac_diagn__pac_d__1B9317B3">
+      <End Role="pacientes" EntitySet="pacientes" />
+      <End Role="pac_diagnostico" EntitySet="pac_diagnostico" />
+    </AssociationSet>
+    <AssociationSet Name="FK__pac_diver__pac_d__7B264821" Association="Self.FK__pac_diver__pac_d__7B264821">
+      <End Role="pacientes" EntitySet="pacientes" />
+      <End Role="pac_diversion_intereses" EntitySet="pac_diversion_intereses" />
+    </AssociationSet>
+    <AssociationSet Name="FK__pac_escol__pac_e__00DF2177" Association="Self.FK__pac_escol__pac_e__00DF2177">
+      <End Role="pacientes" EntitySet="pacientes" />
+      <End Role="pac_escolaridad" EntitySet="pac_escolaridad" />
+    </AssociationSet>
+    <AssociationSet Name="FK__pac_estad__pac_e__662B2B3B" Association="Self.FK__pac_estad__pac_e__662B2B3B">
+      <End Role="pacientes" EntitySet="pacientes" />
+      <End Role="pac_estado_mental" EntitySet="pac_estado_mental" />
+    </AssociationSet>
+    <AssociationSet Name="FK__pac_histo__pac_h__078C1F06" Association="Self.FK__pac_histo__pac_h__078C1F06">
+      <End Role="pacientes" EntitySet="pacientes" />
+      <End Role="pac_historia_per" EntitySet="pac_historia_per" />
+    </AssociationSet>
+    <AssociationSet Name="FK__pac_psico__pac_p__1E6F845E" Association="Self.FK__pac_psico__pac_p__1E6F845E">
+      <End Role="pacientes" EntitySet="pacientes" />
+      <End Role="pac_psicoterapia" EntitySet="pac_psicoterapia" />
+    </AssociationSet>
+    <AssociationSet Name="FK__pac_recor__pac_r__7E02B4CC" Association="Self.FK__pac_recor__pac_r__7E02B4CC">
+      <End Role="pacientes" EntitySet="pacientes" />
+      <End Role="pac_record_trabajo" EntitySet="pac_record_trabajo" />
+    </AssociationSet>
+    <AssociationSet Name="FK__pac_recue__pac_r__03BB8E22" Association="Self.FK__pac_recue__pac_r__03BB8E22">
+      <End Role="pacientes" EntitySet="pacientes" />
+      <End Role="pac_recuerdos_tempranos" EntitySet="pac_recuerdos_tempranos" />
+    </AssociationSet>
+    <AssociationSet Name="FK__pac_situa__pac_s__44CA3770" Association="Self.FK__pac_situa__pac_s__44CA3770">
+      <End Role="pacientes" EntitySet="pacientes" />
+      <End Role="pac_situacion_act" EntitySet="pac_situacion_act" />
+    </AssociationSet>
+    <AssociationSet Name="FK__pacientes__pacie__2BFE89A6" Association="Self.FK__pacientes__pacie__2BFE89A6">
+      <End Role="usuarios" EntitySet="usuarios" />
+      <End Role="pacientes" EntitySet="pacientes" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

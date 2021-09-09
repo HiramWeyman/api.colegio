@@ -1,0 +1,489 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="coleg318_ModelStoreContainer" CdmEntityContainer="coleg318_Entities1">
+    <EntitySetMapping Name="escolaridad">
+      <EntityTypeMapping TypeName="coleg318_Model.escolaridad">
+        <MappingFragment StoreEntitySet="escolaridad">
+          <ScalarProperty Name="escolar_id" ColumnName="escolar_id" />
+          <ScalarProperty Name="escolar_descrip" ColumnName="escolar_descrip" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="estado">
+      <EntityTypeMapping TypeName="coleg318_Model.estado">
+        <MappingFragment StoreEntitySet="estado">
+          <ScalarProperty Name="cve_edo" ColumnName="cve_edo" />
+          <ScalarProperty Name="desc_edo" ColumnName="desc_edo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="estadocivil">
+      <EntityTypeMapping TypeName="coleg318_Model.estadocivil">
+        <MappingFragment StoreEntitySet="estadocivil">
+          <ScalarProperty Name="edocivil_id" ColumnName="edocivil_id" />
+          <ScalarProperty Name="edocivil_descrip" ColumnName="edocivil_descrip" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="estatus">
+      <EntityTypeMapping TypeName="coleg318_Model.estatus">
+        <MappingFragment StoreEntitySet="estatus">
+          <ScalarProperty Name="estatus_id" ColumnName="estatus_id" />
+          <ScalarProperty Name="estatus_descrip" ColumnName="estatus_descrip" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="modalidad">
+      <EntityTypeMapping TypeName="coleg318_Model.modalidad">
+        <MappingFragment StoreEntitySet="modalidad">
+          <ScalarProperty Name="modalidad_id" ColumnName="modalidad_id" />
+          <ScalarProperty Name="modalidad_descrip" ColumnName="modalidad_descrip" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pacientes">
+      <EntityTypeMapping TypeName="coleg318_Model.pacientes">
+        <MappingFragment StoreEntitySet="pacientes">
+          <ScalarProperty Name="paciente_telefono_eme" ColumnName="paciente_telefono_eme" />
+          <ScalarProperty Name="paciente_mun_res" ColumnName="paciente_mun_res" />
+          <ScalarProperty Name="paciente_edo_res" ColumnName="paciente_edo_res" />
+          <ScalarProperty Name="paciente_id" ColumnName="paciente_id" />
+          <ScalarProperty Name="paciente_usuario" ColumnName="paciente_usuario" />
+          <ScalarProperty Name="paciente_nombre" ColumnName="paciente_nombre" />
+          <ScalarProperty Name="paciente_sexo" ColumnName="paciente_sexo" />
+          <ScalarProperty Name="paciente_edad" ColumnName="paciente_edad" />
+          <ScalarProperty Name="paciente_edo_nac" ColumnName="paciente_edo_nac" />
+          <ScalarProperty Name="paciente_mun_nac" ColumnName="paciente_mun_nac" />
+          <ScalarProperty Name="paciente_fec_nac" ColumnName="paciente_fec_nac" />
+          <ScalarProperty Name="paciente_edo_civil" ColumnName="paciente_edo_civil" />
+          <ScalarProperty Name="paciente_estatus" ColumnName="paciente_estatus" />
+          <ScalarProperty Name="paciente_direccion" ColumnName="paciente_direccion" />
+          <ScalarProperty Name="paciente_ocupacion" ColumnName="paciente_ocupacion" />
+          <ScalarProperty Name="paciente_escolaridad" ColumnName="paciente_escolaridad" />
+          <ScalarProperty Name="paciente_fec_ing" ColumnName="paciente_fec_ing" />
+          <ScalarProperty Name="paciente_telefono" ColumnName="paciente_telefono" />
+          <ScalarProperty Name="paciente_modalidad" ColumnName="paciente_modalidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sexo">
+      <EntityTypeMapping TypeName="coleg318_Model.sexo">
+        <MappingFragment StoreEntitySet="sexo">
+          <ScalarProperty Name="sexo_id" ColumnName="sexo_id" />
+          <ScalarProperty Name="sexo_descrip" ColumnName="sexo_descrip" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="usuarios">
+      <EntityTypeMapping TypeName="coleg318_Model.usuarios">
+        <MappingFragment StoreEntitySet="usuarios">
+          <ScalarProperty Name="usuario_cedula" ColumnName="usuario_cedula" />
+          <ScalarProperty Name="usuario_id" ColumnName="usuario_id" />
+          <ScalarProperty Name="usuario_nombre" ColumnName="usuario_nombre" />
+          <ScalarProperty Name="usuario_direccion" ColumnName="usuario_direccion" />
+          <ScalarProperty Name="usuario_cel" ColumnName="usuario_cel" />
+          <ScalarProperty Name="usuario_telcsa" ColumnName="usuario_telcsa" />
+          <ScalarProperty Name="usuario_correo" ColumnName="usuario_correo" />
+          <ScalarProperty Name="usuario_tipo" ColumnName="usuario_tipo" />
+          <ScalarProperty Name="usuario_fecha_ing" ColumnName="usuario_fecha_ing" />
+          <ScalarProperty Name="usuario_password" ColumnName="usuario_password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pac_consulta">
+      <EntityTypeMapping TypeName="coleg318_Model.pac_consulta">
+        <MappingFragment StoreEntitySet="pac_consulta">
+          <ScalarProperty Name="pac_cons_experiencia" ColumnName="pac_cons_experiencia" />
+          <ScalarProperty Name="pac_cons_referencia" ColumnName="pac_cons_referencia" />
+          <ScalarProperty Name="pac_cons_historia" ColumnName="pac_cons_historia" />
+          <ScalarProperty Name="pac_cons_problema" ColumnName="pac_cons_problema" />
+          <ScalarProperty Name="pac_cons_pac_id" ColumnName="pac_cons_pac_id" />
+          <ScalarProperty Name="pac_cons_id" ColumnName="pac_cons_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pac_descrip">
+      <EntityTypeMapping TypeName="coleg318_Model.pac_descrip">
+        <MappingFragment StoreEntitySet="pac_descrip">
+          <ScalarProperty Name="pac_desc_afecto" ColumnName="pac_desc_afecto" />
+          <ScalarProperty Name="pac_desc_movimientos" ColumnName="pac_desc_movimientos" />
+          <ScalarProperty Name="pac_desc_porte" ColumnName="pac_desc_porte" />
+          <ScalarProperty Name="pac_desc_vestimenta" ColumnName="pac_desc_vestimenta" />
+          <ScalarProperty Name="pac_desc_aspectos" ColumnName="pac_desc_aspectos" />
+          <ScalarProperty Name="pac_paciente_id" ColumnName="pac_paciente_id" />
+          <ScalarProperty Name="pac_desc_id" ColumnName="pac_desc_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pac_situacion_act">
+      <EntityTypeMapping TypeName="coleg318_Model.pac_situacion_act">
+        <MappingFragment StoreEntitySet="pac_situacion_act">
+          <ScalarProperty Name="pac_situacion_esp" ColumnName="pac_situacion_esp" />
+          <ScalarProperty Name="pac_situacion_dia" ColumnName="pac_situacion_dia" />
+          <ScalarProperty Name="pac_situacion_pac_id" ColumnName="pac_situacion_pac_id" />
+          <ScalarProperty Name="pac_situacion_id" ColumnName="pac_situacion_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pac_constelacion_fam">
+      <EntityTypeMapping TypeName="coleg318_Model.pac_constelacion_fam">
+        <MappingFragment StoreEntitySet="pac_constelacion_fam">
+          <ScalarProperty Name="pac_conste_cambios" ColumnName="pac_conste_cambios" />
+          <ScalarProperty Name="pac_conste_normas" ColumnName="pac_conste_normas" />
+          <ScalarProperty Name="pac_conste_uniones" ColumnName="pac_conste_uniones" />
+          <ScalarProperty Name="pac_conste_papel_fam" ColumnName="pac_conste_papel_fam" />
+          <ScalarProperty Name="pac_conste_rivalidades" ColumnName="pac_conste_rivalidades" />
+          <ScalarProperty Name="pac_conste_hermanos" ColumnName="pac_conste_hermanos" />
+          <ScalarProperty Name="pac_conste_desc_padre_madre" ColumnName="pac_conste_desc_padre_madre" />
+          <ScalarProperty Name="pac_conste_antecedentes" ColumnName="pac_conste_antecedentes" />
+          <ScalarProperty Name="pac_conste_texto" ColumnName="pac_conste_texto" />
+          <ScalarProperty Name="pac_conste_paciene_id" ColumnName="pac_conste_paciene_id" />
+          <ScalarProperty Name="pac_conste_id" ColumnName="pac_conste_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pac_ajustes_sociales">
+      <EntityTypeMapping TypeName="coleg318_Model.pac_ajustes_sociales">
+        <MappingFragment StoreEntitySet="pac_ajustes_sociales">
+          <ScalarProperty Name="pac_ajustes_novias" ColumnName="pac_ajustes_novias" />
+          <ScalarProperty Name="pac_ajustes_sentir" ColumnName="pac_ajustes_sentir" />
+          <ScalarProperty Name="pac_ajustes_amistades" ColumnName="pac_ajustes_amistades" />
+          <ScalarProperty Name="pac_ajustes_relacionesint" ColumnName="pac_ajustes_relacionesint" />
+          <ScalarProperty Name="pac_ajustes_pac_id" ColumnName="pac_ajustes_pac_id" />
+          <ScalarProperty Name="pac_ajustes_id" ColumnName="pac_ajustes_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pac_datos_maritales">
+      <EntityTypeMapping TypeName="coleg318_Model.pac_datos_maritales">
+        <MappingFragment StoreEntitySet="pac_datos_maritales">
+          <ScalarProperty Name="pac_maritales_familia" ColumnName="pac_maritales_familia" />
+          <ScalarProperty Name="pac_maritales_interaccion" ColumnName="pac_maritales_interaccion" />
+          <ScalarProperty Name="pac_maritales_numhijos" ColumnName="pac_maritales_numhijos" />
+          <ScalarProperty Name="pac_maritales_eventos" ColumnName="pac_maritales_eventos" />
+          <ScalarProperty Name="pac_maritales_desc_conyuge" ColumnName="pac_maritales_desc_conyuge" />
+          <ScalarProperty Name="pac_maritales_expnoviazgo" ColumnName="pac_maritales_expnoviazgo" />
+          <ScalarProperty Name="pac_maritales_noviazgo" ColumnName="pac_maritales_noviazgo" />
+          <ScalarProperty Name="pac_maritales_pac_id" ColumnName="pac_maritales_pac_id" />
+          <ScalarProperty Name="pac_maritales_id" ColumnName="pac_maritales_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pac_desarrollo_sexual">
+      <EntityTypeMapping TypeName="coleg318_Model.pac_desarrollo_sexual">
+        <MappingFragment StoreEntitySet="pac_desarrollo_sexual">
+          <ScalarProperty Name="pac_desarrollo_relaciones" ColumnName="pac_desarrollo_relaciones" />
+          <ScalarProperty Name="pac_desarrollo_homosex" ColumnName="pac_desarrollo_homosex" />
+          <ScalarProperty Name="pac_desarrollo_fantasias" ColumnName="pac_desarrollo_fantasias" />
+          <ScalarProperty Name="pac_desarrollo_interes" ColumnName="pac_desarrollo_interes" />
+          <ScalarProperty Name="pac_desarrollo_contacto" ColumnName="pac_desarrollo_contacto" />
+          <ScalarProperty Name="pac_desarrollo_nociones" ColumnName="pac_desarrollo_nociones" />
+          <ScalarProperty Name="pac_desarrollo_pac_id" ColumnName="pac_desarrollo_pac_id" />
+          <ScalarProperty Name="pac_desarrollo_id" ColumnName="pac_desarrollo_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pac_desc_simismo">
+      <EntityTypeMapping TypeName="coleg318_Model.pac_desc_simismo">
+        <MappingFragment StoreEntitySet="pac_desc_simismo">
+          <ScalarProperty Name="pac_simismo_siente_problem" ColumnName="pac_simismo_siente_problem" />
+          <ScalarProperty Name="pac_simismo_triunfo_frac" ColumnName="pac_simismo_triunfo_frac" />
+          <ScalarProperty Name="pac_simismo_crisis" ColumnName="pac_simismo_crisis" />
+          <ScalarProperty Name="pac_simismo_gustaria" ColumnName="pac_simismo_gustaria" />
+          <ScalarProperty Name="pac_simismo_metas" ColumnName="pac_simismo_metas" />
+          <ScalarProperty Name="pac_simismo_preocupaciones" ColumnName="pac_simismo_preocupaciones" />
+          <ScalarProperty Name="pac_simismo_comocree" ColumnName="pac_simismo_comocree" />
+          <ScalarProperty Name="pac_simismo_comoseve" ColumnName="pac_simismo_comoseve" />
+          <ScalarProperty Name="pac_simismo_pac_id" ColumnName="pac_simismo_pac_id" />
+          <ScalarProperty Name="pac_simismo_id" ColumnName="pac_simismo_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pac_diversion_intereses">
+      <EntityTypeMapping TypeName="coleg318_Model.pac_diversion_intereses">
+        <MappingFragment StoreEntitySet="pac_diversion_intereses">
+          <ScalarProperty Name="pac_diversion_pertenencia" ColumnName="pac_diversion_pertenencia" />
+          <ScalarProperty Name="pac_diversion_practicas" ColumnName="pac_diversion_practicas" />
+          <ScalarProperty Name="pac_diversion_lectura" ColumnName="pac_diversion_lectura" />
+          <ScalarProperty Name="pac_diversion_pac_id" ColumnName="pac_diversion_pac_id" />
+          <ScalarProperty Name="pac_diversion_id" ColumnName="pac_diversion_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pac_escolaridad">
+      <EntityTypeMapping TypeName="coleg318_Model.pac_escolaridad">
+        <MappingFragment StoreEntitySet="pac_escolaridad">
+          <ScalarProperty Name="pac_escolaridad_universidad" ColumnName="pac_escolaridad_universidad" />
+          <ScalarProperty Name="pac_escolaridad_evaluacion" ColumnName="pac_escolaridad_evaluacion" />
+          <ScalarProperty Name="pac_escolaridad_cambios" ColumnName="pac_escolaridad_cambios" />
+          <ScalarProperty Name="pac_escolaridad_rendimiento" ColumnName="pac_escolaridad_rendimiento" />
+          <ScalarProperty Name="pac_escolaridad_relacion" ColumnName="pac_escolaridad_relacion" />
+          <ScalarProperty Name="pac_escolaridad_otras" ColumnName="pac_escolaridad_otras" />
+          <ScalarProperty Name="pac_escolaridad_preparatoria" ColumnName="pac_escolaridad_preparatoria" />
+          <ScalarProperty Name="pac_escolaridad_secundaria" ColumnName="pac_escolaridad_secundaria" />
+          <ScalarProperty Name="pac_escolaridad_primaria" ColumnName="pac_escolaridad_primaria" />
+          <ScalarProperty Name="pac_escolaridad_pac_id" ColumnName="pac_escolaridad_pac_id" />
+          <ScalarProperty Name="pac_escolaridad_id" ColumnName="pac_escolaridad_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pac_estado_mental">
+      <EntityTypeMapping TypeName="coleg318_Model.pac_estado_mental">
+        <MappingFragment StoreEntitySet="pac_estado_mental">
+          <ScalarProperty Name="pac_estado_madurez" ColumnName="pac_estado_madurez" />
+          <ScalarProperty Name="pac_estado_insight" ColumnName="pac_estado_insight" />
+          <ScalarProperty Name="pac_estado_juicio" ColumnName="pac_estado_juicio" />
+          <ScalarProperty Name="pac_estado_funcionamiento" ColumnName="pac_estado_funcionamiento" />
+          <ScalarProperty Name="pac_estado_percepcion" ColumnName="pac_estado_percepcion" />
+          <ScalarProperty Name="pac_estado_pensamiento" ColumnName="pac_estado_pensamiento" />
+          <ScalarProperty Name="pac_estado_asociaciones" ColumnName="pac_estado_asociaciones" />
+          <ScalarProperty Name="pac_estadoafectividad" ColumnName="pac_estadoafectividad" />
+          <ScalarProperty Name="pac_estado_orientacion" ColumnName="pac_estado_orientacion" />
+          <ScalarProperty Name="pac_estado_conciencia" ColumnName="pac_estado_conciencia" />
+          <ScalarProperty Name="pac_estado_pac_id" ColumnName="pac_estado_pac_id" />
+          <ScalarProperty Name="pac_estado_id" ColumnName="pac_estado_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pac_historia_per">
+      <EntityTypeMapping TypeName="coleg318_Model.pac_historia_per">
+        <MappingFragment StoreEntitySet="pac_historia_per">
+          <ScalarProperty Name="pac_hist_salud_act" ColumnName="pac_hist_salud_act" />
+          <ScalarProperty Name="pac_hist_lesiones" ColumnName="pac_hist_lesiones" />
+          <ScalarProperty Name="pac_hist_enfermedades" ColumnName="pac_hist_enfermedades" />
+          <ScalarProperty Name="pac_hist_sueno" ColumnName="pac_hist_sueno" />
+          <ScalarProperty Name="pac_hist_alimentacion" ColumnName="pac_hist_alimentacion" />
+          <ScalarProperty Name="pac_hist_edad_av" ColumnName="pac_hist_edad_av" />
+          <ScalarProperty Name="pac_hist_edad_ad" ColumnName="pac_hist_edad_ad" />
+          <ScalarProperty Name="pac_hist_adolecencia" ColumnName="pac_hist_adolecencia" />
+          <ScalarProperty Name="pac_hist_nines_re" ColumnName="pac_hist_nines_re" />
+          <ScalarProperty Name="pac_hist_infancia" ColumnName="pac_hist_infancia" />
+          <ScalarProperty Name="pac_hist_inicio" ColumnName="pac_hist_inicio" />
+          <ScalarProperty Name="pac_hist_embarazo" ColumnName="pac_hist_embarazo" />
+          <ScalarProperty Name="pac_hist_pac_id" ColumnName="pac_hist_pac_id" />
+          <ScalarProperty Name="pac_hist_id" ColumnName="pac_hist_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pac_psicoterapia">
+      <EntityTypeMapping TypeName="coleg318_Model.pac_psicoterapia">
+        <MappingFragment StoreEntitySet="pac_psicoterapia">
+          <ScalarProperty Name="pac_psico_observaciones" ColumnName="pac_psico_observaciones" />
+          <ScalarProperty Name="pac_psico_recomenda" ColumnName="pac_psico_recomenda" />
+          <ScalarProperty Name="pac_psico_resultados" ColumnName="pac_psico_resultados" />
+          <ScalarProperty Name="pac_psico_tecnicas" ColumnName="pac_psico_tecnicas" />
+          <ScalarProperty Name="pac_psico_intervencion" ColumnName="pac_psico_intervencion" />
+          <ScalarProperty Name="pac_psico_fecha" ColumnName="pac_psico_fecha" />
+          <ScalarProperty Name="pac_psico_texto" ColumnName="pac_psico_texto" />
+          <ScalarProperty Name="pac_psico_desc" ColumnName="pac_psico_desc" />
+          <ScalarProperty Name="pac_psico_pac_id" ColumnName="pac_psico_pac_id" />
+          <ScalarProperty Name="pac_psico_id" ColumnName="pac_psico_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pac_record_trabajo">
+      <EntityTypeMapping TypeName="coleg318_Model.pac_record_trabajo">
+        <MappingFragment StoreEntitySet="pac_record_trabajo">
+          <ScalarProperty Name="pac_record_siente" ColumnName="pac_record_siente" />
+          <ScalarProperty Name="pac_record_relacion" ColumnName="pac_record_relacion" />
+          <ScalarProperty Name="pac_record_sueldo" ColumnName="pac_record_sueldo" />
+          <ScalarProperty Name="pac_record_trabajos" ColumnName="pac_record_trabajos" />
+          <ScalarProperty Name="pac_record_pac_id" ColumnName="pac_record_pac_id" />
+          <ScalarProperty Name="pac_record_id" ColumnName="pac_record_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pac_recuerdos_tempranos">
+      <EntityTypeMapping TypeName="coleg318_Model.pac_recuerdos_tempranos">
+        <MappingFragment StoreEntitySet="pac_recuerdos_tempranos">
+          <ScalarProperty Name="pac_recuerdos_temp" ColumnName="pac_recuerdos_temp" />
+          <ScalarProperty Name="pac_recuerdos_pac_id" ColumnName="pac_recuerdos_pac_id" />
+          <ScalarProperty Name="pac_recuerdos_id" ColumnName="pac_recuerdos_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="diag_primario">
+      <EntityTypeMapping TypeName="coleg318_Model.diag_primario">
+        <MappingFragment StoreEntitySet="diag_primario">
+          <ScalarProperty Name="diag_descrip" ColumnName="diag_descrip" />
+          <ScalarProperty Name="diag_id" ColumnName="diag_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pac_diagnostico">
+      <EntityTypeMapping TypeName="coleg318_Model.pac_diagnostico">
+        <MappingFragment StoreEntitySet="pac_diagnostico">
+          <ScalarProperty Name="pac_diag_fec_seguimiento" ColumnName="pac_diag_fec_seguimiento" />
+          <ScalarProperty Name="pac_diag_motivo_alta" ColumnName="pac_diag_motivo_alta" />
+          <ScalarProperty Name="pac_diag_modelo_tera" ColumnName="pac_diag_modelo_tera" />
+          <ScalarProperty Name="pac_diag_obj_especifico" ColumnName="pac_diag_obj_especifico" />
+          <ScalarProperty Name="pac_diag_obj_integral" ColumnName="pac_diag_obj_integral" />
+          <ScalarProperty Name="pac_diag_pronostico" ColumnName="pac_diag_pronostico" />
+          <ScalarProperty Name="pac_diag_especifico" ColumnName="pac_diag_especifico" />
+          <ScalarProperty Name="pac_diag_primario" ColumnName="pac_diag_primario" />
+          <ScalarProperty Name="pac_diag_diagnostico" ColumnName="pac_diag_diagnostico" />
+          <ScalarProperty Name="pac_diag_pruebaspsi" ColumnName="pac_diag_pruebaspsi" />
+          <ScalarProperty Name="pac_diag_perfilcog" ColumnName="pac_diag_perfilcog" />
+          <ScalarProperty Name="pac_diag_pac_id" ColumnName="pac_diag_pac_id" />
+          <ScalarProperty Name="pac_diag_id" ColumnName="pac_diag_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="infodiagnostico">
+      <EntityTypeMapping TypeName="coleg318_Model.infodiagnostico">
+        <MappingFragment StoreEntitySet="infodiagnostico">
+          <ScalarProperty Name="modtera_descrip" ColumnName="modtera_descrip" />
+          <ScalarProperty Name="alta_descrip" ColumnName="alta_descrip" />
+          <ScalarProperty Name="pac_diag_fec_seguimiento" ColumnName="pac_diag_fec_seguimiento" />
+          <ScalarProperty Name="pac_diag_obj_especifico" ColumnName="pac_diag_obj_especifico" />
+          <ScalarProperty Name="pac_diag_obj_integral" ColumnName="pac_diag_obj_integral" />
+          <ScalarProperty Name="pac_diag_primario" ColumnName="pac_diag_primario" />
+          <ScalarProperty Name="pac_diag_pronostico" ColumnName="pac_diag_pronostico" />
+          <ScalarProperty Name="pac_diag_especifico" ColumnName="pac_diag_especifico" />
+          <ScalarProperty Name="pac_diag_diagnostico" ColumnName="pac_diag_diagnostico" />
+          <ScalarProperty Name="pac_diag_pruebaspsi" ColumnName="pac_diag_pruebaspsi" />
+          <ScalarProperty Name="pac_diag_perfilcog" ColumnName="pac_diag_perfilcog" />
+          <ScalarProperty Name="pac_diag_pac_id" ColumnName="pac_diag_pac_id" />
+          <ScalarProperty Name="pac_diag_id" ColumnName="pac_diag_id" />
+          <ScalarProperty Name="diag_descrip" ColumnName="diag_descrip" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="hojausomultiple">
+      <EntityTypeMapping TypeName="coleg318_Model.hojausomultiple">
+        <MappingFragment StoreEntitySet="hojausomultiple">
+          <ScalarProperty Name="modalidad_descrip" ColumnName="modalidad_descrip" />
+          <ScalarProperty Name="edocivil_descrip" ColumnName="edocivil_descrip" />
+          <ScalarProperty Name="sexo_descrip" ColumnName="sexo_descrip" />
+          <ScalarProperty Name="Expr1" ColumnName="Expr1" />
+          <ScalarProperty Name="usuario_cedula" ColumnName="usuario_cedula" />
+          <ScalarProperty Name="usuario_password" ColumnName="usuario_password" />
+          <ScalarProperty Name="usuario_fecha_ing" ColumnName="usuario_fecha_ing" />
+          <ScalarProperty Name="usuario_tipo" ColumnName="usuario_tipo" />
+          <ScalarProperty Name="usuario_correo" ColumnName="usuario_correo" />
+          <ScalarProperty Name="usuario_telcsa" ColumnName="usuario_telcsa" />
+          <ScalarProperty Name="usuario_cel" ColumnName="usuario_cel" />
+          <ScalarProperty Name="usuario_direccion" ColumnName="usuario_direccion" />
+          <ScalarProperty Name="usuario_nombre" ColumnName="usuario_nombre" />
+          <ScalarProperty Name="usuario_id" ColumnName="usuario_id" />
+          <ScalarProperty Name="paciente_modalidad" ColumnName="paciente_modalidad" />
+          <ScalarProperty Name="paciente_telefono" ColumnName="paciente_telefono" />
+          <ScalarProperty Name="paciente_fec_ing" ColumnName="paciente_fec_ing" />
+          <ScalarProperty Name="paciente_escolaridad" ColumnName="paciente_escolaridad" />
+          <ScalarProperty Name="paciente_ocupacion" ColumnName="paciente_ocupacion" />
+          <ScalarProperty Name="paciente_direccion" ColumnName="paciente_direccion" />
+          <ScalarProperty Name="paciente_estatus" ColumnName="paciente_estatus" />
+          <ScalarProperty Name="paciente_edo_civil" ColumnName="paciente_edo_civil" />
+          <ScalarProperty Name="paciente_fec_nac" ColumnName="paciente_fec_nac" />
+          <ScalarProperty Name="paciente_mun_nac" ColumnName="paciente_mun_nac" />
+          <ScalarProperty Name="paciente_edo_nac" ColumnName="paciente_edo_nac" />
+          <ScalarProperty Name="paciente_edad" ColumnName="paciente_edad" />
+          <ScalarProperty Name="paciente_sexo" ColumnName="paciente_sexo" />
+          <ScalarProperty Name="paciente_nombre" ColumnName="paciente_nombre" />
+          <ScalarProperty Name="paciente_usuario" ColumnName="paciente_usuario" />
+          <ScalarProperty Name="paciente_id" ColumnName="paciente_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="alta_tratamiento">
+      <EntityTypeMapping TypeName="coleg318_Model.alta_tratamiento">
+        <MappingFragment StoreEntitySet="alta_tratamiento">
+          <ScalarProperty Name="alta_descrip" ColumnName="alta_descrip" />
+          <ScalarProperty Name="alta_id" ColumnName="alta_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cat_metodo_evaluacion">
+      <EntityTypeMapping TypeName="coleg318_Model.cat_metodo_evaluacion">
+        <MappingFragment StoreEntitySet="cat_metodo_evaluacion">
+          <ScalarProperty Name="cat_metodo_descrip" ColumnName="cat_metodo_descrip" />
+          <ScalarProperty Name="cat_metodo" ColumnName="cat_metodo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="evaluacion_resultado">
+      <EntityTypeMapping TypeName="coleg318_Model.evaluacion_resultado">
+        <MappingFragment StoreEntitySet="evaluacion_resultado">
+          <ScalarProperty Name="evaluacion_resultado1" ColumnName="evaluacion_resultado" />
+          <ScalarProperty Name="evaluacion_metodo" ColumnName="evaluacion_metodo" />
+          <ScalarProperty Name="evaluacion_pac_id" ColumnName="evaluacion_pac_id" />
+          <ScalarProperty Name="evaluacion_id" ColumnName="evaluacion_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="metodo_evaluacion">
+      <EntityTypeMapping TypeName="coleg318_Model.metodo_evaluacion">
+        <MappingFragment StoreEntitySet="metodo_evaluacion">
+          <ScalarProperty Name="metodo_pac_id" ColumnName="metodo_pac_id" />
+          <ScalarProperty Name="metodo_evaluacion1" ColumnName="metodo_evaluacion" />
+          <ScalarProperty Name="metodo_id" ColumnName="metodo_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="evaluacion">
+      <EntityTypeMapping TypeName="coleg318_Model.evaluacion">
+        <MappingFragment StoreEntitySet="evaluacion">
+          <ScalarProperty Name="metodo_pac_id" ColumnName="metodo_pac_id" />
+          <ScalarProperty Name="metodo_evaluacion" ColumnName="metodo_evaluacion" />
+          <ScalarProperty Name="metodo_id" ColumnName="metodo_id" />
+          <ScalarProperty Name="cat_metodo_descrip" ColumnName="cat_metodo_descrip" />
+          <ScalarProperty Name="cat_metodo" ColumnName="cat_metodo" />
+          <ScalarProperty Name="Expr1" ColumnName="Expr1" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cat_modelo_terapeutico">
+      <EntityTypeMapping TypeName="coleg318_Model.cat_modelo_terapeutico">
+        <MappingFragment StoreEntitySet="cat_modelo_terapeutico">
+          <ScalarProperty Name="modtera_descrip" ColumnName="modtera_descrip" />
+          <ScalarProperty Name="modtera_id" ColumnName="modtera_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vmetodos_evaluacion">
+      <EntityTypeMapping TypeName="coleg318_Model.vmetodos_evaluacion">
+        <MappingFragment StoreEntitySet="vmetodos_evaluacion">
+          <ScalarProperty Name="resultado" ColumnName="resultado" />
+          <ScalarProperty Name="evaluacion" ColumnName="evaluacion" />
+          <ScalarProperty Name="metodo_pac_id" ColumnName="metodo_pac_id" />
+          <ScalarProperty Name="metodo_evaluacion" ColumnName="metodo_evaluacion" />
+          <ScalarProperty Name="metodo_id" ColumnName="metodo_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pacientediagnosticado">
+      <EntityTypeMapping TypeName="coleg318_Model.pacientediagnosticado">
+        <MappingFragment StoreEntitySet="pacientediagnosticado">
+          <ScalarProperty Name="diag_id" ColumnName="diag_id" />
+          <ScalarProperty Name="paciente_usuario" ColumnName="paciente_usuario" />
+          <ScalarProperty Name="paciente_nombre" ColumnName="paciente_nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="infogeneral">
+      <EntityTypeMapping TypeName="coleg318_Model.infogeneral">
+        <MappingFragment StoreEntitySet="infogeneral">
+          <ScalarProperty Name="municipio_res" ColumnName="municipio_res" />
+          <ScalarProperty Name="estado_res" ColumnName="estado_res" />
+          <ScalarProperty Name="modalidad_descrip" ColumnName="modalidad_descrip" />
+          <ScalarProperty Name="paciente_telefono_eme" ColumnName="paciente_telefono_eme" />
+          <ScalarProperty Name="paciente_telefono" ColumnName="paciente_telefono" />
+          <ScalarProperty Name="paciente_fec_ing" ColumnName="paciente_fec_ing" />
+          <ScalarProperty Name="escolar_descrip" ColumnName="escolar_descrip" />
+          <ScalarProperty Name="paciente_ocupacion" ColumnName="paciente_ocupacion" />
+          <ScalarProperty Name="paciente_direccion" ColumnName="paciente_direccion" />
+          <ScalarProperty Name="estatus_descrip" ColumnName="estatus_descrip" />
+          <ScalarProperty Name="edocivil_descrip" ColumnName="edocivil_descrip" />
+          <ScalarProperty Name="paciente_fec_nac" ColumnName="paciente_fec_nac" />
+          <ScalarProperty Name="desc_mun" ColumnName="desc_mun" />
+          <ScalarProperty Name="desc_edo" ColumnName="desc_edo" />
+          <ScalarProperty Name="paciente_edad" ColumnName="paciente_edad" />
+          <ScalarProperty Name="sexo_descrip" ColumnName="sexo_descrip" />
+          <ScalarProperty Name="paciente_nombre" ColumnName="paciente_nombre" />
+          <ScalarProperty Name="paciente_usuario" ColumnName="paciente_usuario" />
+          <ScalarProperty Name="paciente_id" ColumnName="paciente_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
